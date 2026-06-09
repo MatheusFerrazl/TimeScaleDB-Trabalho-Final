@@ -1,0 +1,33 @@
+Aqui está um arquivo .gitignore perfeito para o seu projeto em Node.js.
+
+Além de ignorar a pasta node_modules, ele já inclui outras boas práticas essenciais, como ignorar arquivos de variáveis de ambiente (.env), que contêm senhas de banco de dados, e pastas de logs.
+
+Crie um arquivo chamado .gitignore (com o ponto no início) na raiz do seu projeto e cole o seguinte conteúdo:
+
+Plaintext
+# Dependências (Node.js)
+node_modules/
+jspm_packages/
+
+# Variáveis de ambiente e segredos (Nunca suba para o GitHub!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos do Sistema Operacional (opcional, mas bom ter)
+.DS_Store
+Thumbs.db
+
+# Pastas de build/dist (caso vá usar TypeScript ou compilar algo no futuro)
+dist/
+build/
