@@ -1,12 +1,11 @@
 import { CircleFill } from "react-bootstrap-icons";
+import clsx from "clsx";
 
 import type { DataCenter } from "../../types/DataCenter";
 
-import clsx from "clsx";
-
-interface RowProps  {
+interface RowProps {
   dataCenter: DataCenter;
-};
+}
 
 function Row({ dataCenter }: RowProps) {
   const dataCenterColor = clsx({
@@ -19,12 +18,14 @@ function Row({ dataCenter }: RowProps) {
   return (
     <tr>
       <td>{dataCenter.dataCenter}</td>
+
       <td>
         <div className="d-flex align-items-center justify-content-center">
           <CircleFill className={`me-2 ${dataCenterColor}`} size={10} />
-          <span>{dataCenter.temperature}°</span>
+          <span>{dataCenter.temperature}°C</span>
         </div>
       </td>
+
       <td>{dataCenter.sector}</td>
       <td>{dataCenter.room}</td>
     </tr>

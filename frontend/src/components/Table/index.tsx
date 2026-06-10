@@ -6,7 +6,7 @@ import {
 } from "react-bootstrap-icons";
 
 import type { DataCenter } from "../../types/DataCenter";
-import { Row } from "react-bootstrap";
+import Row from "../Row/Row";
 
 interface TableProps {
   rows: DataCenter[];
@@ -23,18 +23,21 @@ function Table({ rows }: TableProps) {
               <span>Data-Centers</span>
             </div>
           </th>
+
           <th>
             <div className="d-flex align-items-center justify-content-center">
               <ThermometerSnow className="me-2 text-info" size={18} />
               <span>Temperatura</span>
             </div>
           </th>
+
           <th>
             <div className="d-flex align-items-center justify-content-center">
               <Diagram3 className="me-2 text-secondary" size={18} />
               <span>Setor</span>
             </div>
           </th>
+
           <th>
             <div className="d-flex align-items-center justify-content-center">
               <GeoAlt className="me-2 text-danger" size={18} />
@@ -43,6 +46,7 @@ function Table({ rows }: TableProps) {
           </th>
         </tr>
       </thead>
+
       <tbody>
         {rows.map((row) => (
           <Row key={row.id} dataCenter={row} />
